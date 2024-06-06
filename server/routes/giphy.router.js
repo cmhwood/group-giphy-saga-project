@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
   const searchQuery = req.body.search;
   axios
     .get(
-      `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${searchQuery}`
+      `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${searchQuery}&limit=10`
     )
     .then((response) => {
       res.send(response.data.data);
