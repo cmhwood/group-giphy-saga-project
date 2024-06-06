@@ -52,7 +52,7 @@ router.put("/:id", (req, res) => {
 
 // delete a favorite
 router.delete("/:id", (req, res) => {
-  const sqlText = `DELETE FROM "favorites" WHERE id=$1;`;
+  const sqlText = `DELETE FROM "favorites" WHERE id=$1`;
   pool
     .query(sqlText, [req.params.id])
     .then(() => {
