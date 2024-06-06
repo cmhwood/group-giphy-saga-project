@@ -6,7 +6,8 @@ const router = express.Router();
 router.get("/", (req, res) => {
   // console.log('this is the key recieved:',GIPHY_API_KEY)
   const GIPHY_API_KEY = process.env.GIPHY_API_KEY;
-  const searchQuery = req.body.search;
+  const searchQuery = req.query.search
+  console.log(searchQuery)
   axios
     .get(
       `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${searchQuery}&limit=10`
