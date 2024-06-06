@@ -1,5 +1,4 @@
 -- Database name should be: giphy_search_favorites
-
 -- Categories table:
 CREATE TABLE "categories" (
   "id" SERIAL PRIMARY KEY,
@@ -7,9 +6,9 @@ CREATE TABLE "categories" (
 );
 
 -- Default categories. You may change these. 🙂
-INSERT INTO "categories"
-  ("name")
-  VALUES
+INSERT INTO
+  "categories" ("name")
+VALUES
   ('wild'),
   ('uproarious'),
   ('poignant'),
@@ -17,6 +16,11 @@ INSERT INTO "categories"
   ('whimsical');
 
 -- Favorites table:
+CREATE TABLE "favorites" (
+  "id" SERIAL PRIMARY KEY,
+  "url" VARCHAR NOT NULL,
+  "category_id" INT REFERENCES "categories"
+);
 
 -- You'll need a "favorites" table for storing each instance of
 -- a Giphy image that has been "favorited."
