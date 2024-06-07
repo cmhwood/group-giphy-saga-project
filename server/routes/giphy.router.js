@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
   console.log(searchQuery);
   axios
     .get(
-      `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${searchQuery}&limit=10&offset=${
+      `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${searchQuery}&limit=24&offset=${
         offsetVariable + 10
       }`
     )

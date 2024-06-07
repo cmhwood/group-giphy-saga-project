@@ -1,32 +1,17 @@
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import FavoriteGifs from "../Favorites/Favorites";
+import Header from "../Header/Header";
 import Search from "../Search/Search";
 import Favorites from "../Favorites/Favorites";
+import NavBar from "../NavBar/NavBar.jsx";
 
 function App() {
-  // useEffect(() => {
-  //   ();
-  // }, []);
   return (
     <>
       <Router>
         <div className="App">
-          <header className="App-header">
-            <div>
-              <h1>Giphy Search!</h1>
-            </div>
-            {/* <br /> */}
-            <nav>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/favorites">Favorites</Link>
-                </li>
-              </ul>
-            </nav>
-          </header>
+          <Header />
+          <NavBar />
         </div>
         <div>
           <Route path="/" exact>

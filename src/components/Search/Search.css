@@ -1,0 +1,31 @@
+h1, input {
+    margin: 15px;
+}
+
+.page-card {
+
+    filter: drop-shadow(1px 1px lightgrey);
+    margin: 20px;
+    border: 1px solid lightslategray;
+    height: 275px;
+    
+  }
+  
+  .card-img-top {
+  margin: auto;
+max-width: fit-content;
+max-height: 150px
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+body {
+    background-color: blanchedalmond;
+}

@@ -1,0 +1,22 @@
+.page-card {
+  filter: drop-shadow(1px 1px lightgrey);
+  margin: 20px;
+  border: 1px solid lightslategray;
+  height: 300px;
+}
+
+.card-img-top {
+min-width: 250px;
+
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-wrapper {
+  margin-left: 15%;
+  display: flex;
+  flex-wrap: wrap;
+}
+

@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+#appHeader {
+  background-color: goldenrod;
+  color: white;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+}
