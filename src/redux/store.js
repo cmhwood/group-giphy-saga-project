@@ -46,7 +46,10 @@ function* fetchFavoritesSaga() {
 // saga to PUT / update the categories
 function* updateCategorySaga(action) {
   try {
-    yield axios.put(`/api/favorites/${action.payload.gifID}`, {category_id: action.payload.category_id, gifID: action.payload.gifID});
+    yield axios.put(`/api/favorites/${action.payload.gifID}`, {
+      category_id: action.payload.category_id,
+      gifID: action.payload.gifID,
+    });
     yield put({ type: "FETCH_FAVORITES" });
   } catch (err) {
     alert("error updating category");
