@@ -89,7 +89,20 @@ export default function FavoriteGifs() {
             <option value="4">Felicitous</option>
             <option value="5">Whimsical</option>
           </select>
-          <p>Category: {favorite.category_id === 1 ? "Wild" : favorite.category_id === 2 ? "Uproarious" : favorite.category_id === 3 ? "Poignant" : favorite.category_id === 4 ? "Felicitous" : favorite.category_id === 5 ? "Whimsical" : 'Add Category'}</p>
+          <p>
+            Category:{" "}
+            {favorite.category_id === 1
+              ? "Wild"
+              : favorite.category_id === 2
+              ? "Uproarious"
+              : favorite.category_id === 3
+              ? "Poignant"
+              : favorite.category_id === 4
+              ? "Felicitous"
+              : favorite.category_id === 5
+              ? "Whimsical"
+              : "Add Category"}
+          </p>
         </div>
       ))}
     </>
