@@ -5,7 +5,8 @@ const router = express.Router();
 
 // return all favorite images
 router.get("/", (req, res) => {
-  const queryText = 'SELECT * FROM "favorites";';
+  const queryText =
+    'SELECT "favorites".*, "categories"."name" AS "category_name" FROM "favorites" LEFT OUTER JOIN "categories" ON "favorites"."category_id" = "categories"."id" ; ';
   pool
     .query(queryText)
     .then((result) => {
@@ -26,6 +27,7 @@ router.post("/", (req, res) => {
   pool
     .query(queryText, queryValues)
     .then((result) => {
+
       res.sendStatus(201);
     })
     .catch((error) => {

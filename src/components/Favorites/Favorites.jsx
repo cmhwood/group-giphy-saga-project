@@ -50,7 +50,7 @@ export default function FavoriteGifs() {
         >
           <div className={"card-body"}>
             <img src={favorite.url} className={"card-img-top"} />
-            <p>
+            {/* <p>
               Category:{" "}
               {favorite.category_id === 1
                 ? "Wild"
@@ -63,7 +63,8 @@ export default function FavoriteGifs() {
                 : favorite.category_id === 5
                 ? "Whimsical"
                 : "Add Category"}
-            </p>
+            </p> */}
+            <p>Category: {favorite.category_name ? favorite.category_name : 'Add Category'}</p>
             <button
               onClick={() => {
                 deleteFavorite(favorite.id);
@@ -73,6 +74,7 @@ export default function FavoriteGifs() {
               Remove
             </button>
             <select
+              value={favorite.category_id}
               name="category"
               id="category"
               onChange={(event) => {
